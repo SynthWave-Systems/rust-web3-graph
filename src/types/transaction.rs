@@ -94,6 +94,7 @@ pub struct Receipt {
     #[serde(rename = "contractAddress")]
     pub contract_address: Option<Address>,
     /// Logs generated within this transaction.
+    #[serde(default)]
     pub logs: Vec<Log>,
     /// Status: either 1 (success) or 0 (failure).
     pub status: Option<U64>,
